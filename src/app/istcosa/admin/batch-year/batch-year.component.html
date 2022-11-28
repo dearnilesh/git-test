@@ -1,0 +1,41 @@
+<div class="container mt-5 ">
+    <div class="row ">
+        <!-- <div class="card-header  col text-center pt-2  my-2 h3"><span class="text-danger ">Batch </span> Details
+        </div>
+        <hr> -->
+
+        <div class="col-3"></div>
+        <div class="col-6 ">
+            <div class="border border-primary  rounded border-2">
+                <div class=" bg-secondary  ">
+                    <div class="card-header  text-center py-3  h3"><span class=" h-50 w-25 ">Batch </span> Details
+                    </div>
+                </div>
+
+                <form class="mt-1 " [formGroup]="batchYearForm"  (ngSubmit)="submitBatchYearRecord(batchYearForm.value)">
+                    <div class="py-4 px-5">
+                                        <div class="form-group ">
+                            <label for="BatchYear">Roll No<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" FormControlName="BatchYear" placeholder="Enter Roll No" 
+                               id="BatchYear">
+                            <!-- <input type="number" id="quantity" name="quantity" min="1" max="5"> -->
+                            <!-- <option *ngFor="let userRollN of rollNo">
+                                {{userRollN}}
+                            </option> -->
+                        </div>
+                    </div>
+                    <div class="bg-secondary">
+                        <div class="text-center py-3 mt-5"><button class="btn btn-success" type="submit">Submit
+                        </button></div>
+                    </div>
+                    
+                </form>
+                <div class="col-3"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+

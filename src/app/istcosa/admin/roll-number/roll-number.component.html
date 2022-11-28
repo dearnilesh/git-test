@@ -1,0 +1,49 @@
+<div class="container mt-5 ">
+    <div class="row ">
+        <!-- <div class="card-header  col text-center pt-2  my-2 h3"><span class="text-danger ">Batch </span> Details
+        </div>
+        <hr> -->
+
+        <div class="col-3"></div>
+        <div class="col-6 ">
+            <div class="border border-primary  rounded border-2">
+                <div class=" bg-secondary  ">
+                    <div class="card-header  text-center py-3  h3"><span class=" h-50 w-25 ">Batch </span> Details
+                    </div>
+                </div>
+
+                <form class="mt-1 " [formGroup]="rollNumberForm"  (ngSubmit)="submitRollNumberRecord(rollNumberForm.value)">
+
+                    <div class="py-4 px-5">
+                        <div class="form-group  mb-5 ">
+                            <label for="BatchYear">Batch Year<span class="text-danger">*</span></label>
+                            <select type="number" formControlName="BatchYear" #defaltValue  class="form-control" id="BatchYear">
+                                <option value="0" selected>--Select batch no---</option>
+                                <option *ngFor="let count of allbatchYear" [value]="count.BatchYear">{{count.BatchYear}} 
+                                </option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group ">
+                            <label for="RollNumber1">Roll No<span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" formControlName="RollNumber1" placeholder="Enter Roll No" name="RollNumber1"
+                                min="4" max="20" id="RollNumber1" required>
+                            <!-- <input type="number" id="quantity" name="quantity" min="1" max="5"> -->
+                            <!-- <option *ngFor="let userRollN of rollNo">
+                                {{userRollN}}
+                            </option> -->
+                        </div>
+                    </div>
+                    <div class="bg-secondary">
+                        <div class="text-center py-3 mt-5"><button class="btn btn-success" (click)="getId(defaltValue)" type="submit">Submit
+                        </button></div>
+                    </div>
+                    
+                </form>
+                <div class="col-3"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
